@@ -2,11 +2,16 @@
 <html>
 <head>
     <title>Test page </title>
+    <script type="text/javascript" src="slider.js"></script>
+    <script type="text/javascript">
+        var bar = {{ site.github.repository_name }}
+    </script>
 </head>
 <body>
 
 <div>
 <p>Content after this</p>
+<p>{{ site.github.repository_name }}</p>
 {{ content }}
 
 </div>

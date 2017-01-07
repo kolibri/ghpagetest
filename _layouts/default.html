@@ -2,18 +2,37 @@
 <html>
 <head>
     <title>Test page </title>
-    <script type="text/javascript" src="/{{ site.github.repository_name }}/slider.js"></script>
     <script type="text/javascript">
-        var bar = "{{ site.github.repository_name }}"
+
+            var slides = [
+            "{{ site.github.repository_name }}/slides/foo001.html",
+            "{{ site.github.repository_name }}/slides/foo002.html",
+            "{{ site.github.repository_name }}/slides/foo003.html",
+            "{{ site.github.repository_name }}/slides/foo004.html",
+            "{{ site.github.repository_name }}/slides/foo005.html"
+            ]
+    </script>
+    <!-- <script type="text/javascript" src="/{{ site.github.url }}/slider.js"></script> -->
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log(slides);
+
+            for (key in slides) {
+                console.log('checking ' + slide[key])
+                if (window.location.pathname == slides[key]) {
+                    console.log('Im on slide ' + slide[key])
+                }
+            }
+        })
     </script>
 </head>
 <body>
 
-<div>
-<p>Content after this</p>
-<p>{{ site.github.repository_name }}</p>
-{{ content }}
+    <div>
+        <p>Content after this</p>
+        <p>{{ site.github.repository_name }}</p>
+        {{ content }}
 
-</div>
+    </div>
 </body>
 </html>

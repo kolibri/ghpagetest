@@ -20,6 +20,7 @@
             var nextSlide = 0;
             var previousSlide = null;
             for (key in slides) {
+                key = parseInt(key)
                 console.log('checking ' + slides[key])
                 if (window.location.pathname == slides[key]) {
                     console.log('Im on slide ' + slides[key])

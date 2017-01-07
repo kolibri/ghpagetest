@@ -36,13 +36,17 @@
 
             var navigationContainer = document.getElementById('navigation')
             if (null !== nextSlide) {
+                console.log('adding next slide link')
                 var nextLink = document.createElement('a')
                 nextLink.href = slides[nextSlide]
+                nextLink.appendChild(document.createTextNode('next'))
                 navigationContainer.appendChild(nextLink)
             }
             if (null !== previousSlide) {
+                console.log('adding previous slide link')
                 var previousLink = document.createElement('a')
                 previousLink.href = slides[previousSlide]
+                previousLink.appendChild(document.createTextNode('previous'))
                 navigationContainer.appendChild(previousLink)
             }
         })

@@ -8,7 +8,7 @@ var slides = {
     "slides/foo005.html"
 }
 
-var foo = {{ site.github.repository_name }}
+var foo = "{{ site.github.repository_name }}"
 
 
 

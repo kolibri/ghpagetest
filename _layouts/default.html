@@ -12,7 +12,7 @@
         "/{{ site.github.repository_name }}/slides/foo005.html"
         ]
     </script>
-    <!-- <script type="text/javascript" src="/{{ site.github.url }}/slider.js"></script> -->
+    <!-- <script type="text/javascript" src="{{ site.github.url }}/slider.js"></script> -->
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function() {
             console.log(slides);
@@ -35,7 +35,7 @@
             console.log('previous ' + previousSlide)
         })
     </script>
-    <link rel="stylesheet" type="text/css" href="/{{ site.github.url }}/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.github.url }}/github-markdown.css">
     <style>
         .markdown-body {
             box-sizing: border-box;

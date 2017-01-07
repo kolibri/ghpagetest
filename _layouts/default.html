@@ -4,13 +4,13 @@
     <title>Test page </title>
     <script type="text/javascript">
 
-            var slides = [
-            "/{{ site.github.repository_name }}/slides/foo001.html",
-            "/{{ site.github.repository_name }}/slides/foo002.html",
-            "/{{ site.github.repository_name }}/slides/foo003.html",
-            "/{{ site.github.repository_name }}/slides/foo004.html",
-            "/{{ site.github.repository_name }}/slides/foo005.html"
-            ]
+        var slides = [
+        "/{{ site.github.repository_name }}/slides/foo001.html",
+        "/{{ site.github.repository_name }}/slides/foo002.html",
+        "/{{ site.github.repository_name }}/slides/foo003.html",
+        "/{{ site.github.repository_name }}/slides/foo004.html",
+        "/{{ site.github.repository_name }}/slides/foo005.html"
+        ]
     </script>
     <!-- <script type="text/javascript" src="/{{ site.github.url }}/slider.js"></script> -->
     <script type="text/javascript">
@@ -35,10 +35,20 @@
             console.log('previous ' + previousSlide)
         })
     </script>
+    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+    </style>    
 </head>
 <body>
 
-    <div>
+    <div class="markdown-body">
         <p>Content after this</p>
         <p>{{ site.github.repository_name }}</p>
         {{ content }}

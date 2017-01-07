@@ -16,13 +16,22 @@
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function() {
             console.log(slides);
-
+            var currentSlide = null;
+            var nextSlide = 0;
+            var previousSlide = null;
             for (key in slides) {
                 console.log('checking ' + slides[key])
                 if (window.location.pathname == slides[key]) {
                     console.log('Im on slide ' + slides[key])
+                    currentSlide = key
+                    nextSlide = ((key + 1) in slides) ? key + 1 : null
+                    previousSlide = ((key - 1) in slides) ? key - 1 : null
                 }
             }
+
+            console.log('current ' + currentSlide)
+            console.log('next ' + nextSlide)
+            console.log('previous ' + previousSlide)
         })
     </script>
 </head>

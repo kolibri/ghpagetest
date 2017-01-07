@@ -1,9 +1,6 @@
-
-
 # {{ site.github.project_tagline }}
 
-
-##Some content:
+## Some content:
 
 Foobar and a lot of things went wrong
 
@@ -14,5 +11,5 @@ things:
 ```
 
 
-`inline code`
+This is `inline code` in a line.
 
